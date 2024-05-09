@@ -31,7 +31,7 @@ node index.js
 ## API Endpoints
 
 ### Create a new user
-- URL: /users
+- URL: http://localhost:4500/users
 - Method: POST
 - Request Body:
 ```bash
@@ -46,7 +46,7 @@ node index.js
 
 
 ### Distribute earnings
-- URL: /distribute
+- URL: http://localhost:4500/distribute
 - Method: POST
 - Request Body:
 ```bash
