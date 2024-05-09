@@ -51,7 +51,7 @@ router.get("/users", async (req, res) => {
     }
 });
 
-// Function to distribute earnings according to MLM rules and distribute to all parent users
+// Function to distribute earnings
 async function distributeEarnings(user, amount) {
   const distribution = {};
   let remainingAmount = amount;
@@ -63,15 +63,15 @@ async function distributeEarnings(user, amount) {
     let percentage;
 
     if (currentUser.level === user.level) {
-      percentage = 0.6; // 40% for the user's level
+      percentage = 0.6;
     } else if (currentUser.level === user.level - 1) {
-      percentage = 0.2; // 20% for the parent
+      percentage = 0.2;
     } else if (currentUser.level === user.level - 2) {
-      percentage = 0.1; // 10% for the grandparent
+      percentage = 0.1;
     } else if (currentUser.level === user.level - 3) {
-      percentage = 0.05; // 5% for the great-grandparent
+      percentage = 0.05;
     } else {
-      percentage = 0.01; // 1% other levels
+      percentage = 0.01;
     }
 
     const distributedAmount = remainingAmount * percentage;
@@ -82,17 +82,17 @@ async function distributeEarnings(user, amount) {
     console.log(distributedAmount);
     console.log(currentUser);
 
-    // Distribute earnings to parent if available
+    // Distribute earnings to parent
     if (currentUser.parent) {
       const parent = await User.findById(currentUser.parent);
       if (parent) {
         remainingAmount -= distributedAmount;
         currentUser = parent;
       } else {
-        currentUser = null; // Break the loop if parent user not found
+        currentUser = null;
       }
     } else {
-      currentUser = null; // Break the loop if no parent
+      currentUser = null; 
     }
   }
 
