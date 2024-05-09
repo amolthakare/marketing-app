@@ -46,7 +46,7 @@ node index.js
 - Request Body:
 ```bash
 {
-  "name": "User Name",
+  "name": "<User_Name>",
   "parentId": "<parent_user_id>"
 }
 
