@@ -1,3 +1,4 @@
+https://marketing-app-nvpy.onrender.com
 # Multi-Level Marketing API
 
 This is a Multi-Level Marketing (MLM) API developed using Node.js and MongoDB. It allows users to create a multi-level network and distribute earnings among different levels of users based on specified rules.
@@ -30,13 +31,22 @@ node index.js
 
 ## API Endpoints
 
+### Schema
+| parameter | type | description |
+| :---- | :---- | :---- |
+| `name` | `String` | Required: user name |
+| `parentId` | `ObjectId` | required: ref of `User` |
+| `level` | `Number` | Required: level will be set as parentLevel+1 and if no parent then 0 |
+| `earnings` | `Number` | Earning of the user |
+
+
 ### Create a new user
 - URL: http://localhost:4500/users
 - Method: POST
 - Request Body:
 ```bash
 {
-  "name": "User Name",
+  "name": "<User_Name>",
   "parentId": "<parent_user_id>"
 }
 
