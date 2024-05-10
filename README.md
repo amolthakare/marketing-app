@@ -41,7 +41,7 @@ node index.js
 
 
 ### Create a new user
-- URL: http://localhost:4500/users
+- URL: https://marketing-app-nvpy.onrender.com/users
 - Method: POST
 - Request Body:
 ```bash
@@ -56,7 +56,7 @@ node index.js
 
 
 ### Distribute earnings
-- URL: http://localhost:4500/distribute
+- URL: https://marketing-app-nvpy.onrender.com/distribute
 - Method: POST
 - Request Body:
 ```bash
@@ -69,7 +69,7 @@ node index.js
 - amount (required): Amount to be distributed.
 
 ### Get all users
-- URL: /users
+- URL: https://marketing-app-nvpy.onrender.com/users
 - Method: GET
 
 ### Testing
