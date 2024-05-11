@@ -15,15 +15,9 @@ git clone https://github.com/amolthakare/marketing-app.git
 ## Create a .env file in the root directory and add the following environment variables:
 
 ```bash
-<<<<<<< HEAD
-mongoURL= your mongodb url
-port = port number
-key = your key
-=======
 mongoURL=`your mongodb url`
 port = `port`
 key =`your key`
->>>>>>> 317bd95b64266323243ede0130f4a29a92e9a4ab
 ```
 
 
