@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/model");
 
-// Create a new user with a name and optionally assign a parent user
 router.post("/users", async (req, res) => {
   try {
     const { name, parentId } = req.body;
@@ -25,7 +24,6 @@ router.post("/users", async (req, res) => {
   }
 });
 
-// Distribute earnings based on the specified rules
 router.post("/distribute", async (req, res) => {
   try {
     const { userId, amount } = req.body;
@@ -82,7 +80,6 @@ async function distributeEarnings(user, amount) {
     console.log(distributedAmount);
     console.log(currentUser);
 
-    // Distribute earnings to parent
     if (currentUser.parent) {
       const parent = await User.findById(currentUser.parent);
       if (parent) {
