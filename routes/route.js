@@ -49,7 +49,6 @@ router.get("/users", async (req, res) => {
     }
 });
 
-// Function to distribute earnings
 async function distributeEarnings(user, amount) {
   const distribution = {};
   let remainingAmount = amount;
