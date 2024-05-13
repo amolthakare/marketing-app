@@ -67,8 +67,18 @@ async function distributeEarnings(user, amount) {
       percentage = 0.1;
     } else if (currentUser.level === user.level - 3) {
       percentage = 0.05;
-    } else {
+    } else if (currentUser.level === user.level -4) {
       percentage = 0.01;
+    } else if (currentUser.level === user.level -5) {
+      percentage = 0.01;
+    } else if (currentUser.level === user.level -6) {
+      percentage = 0.01;
+    } else if (currentUser.level === user.level -7) {
+      percentage = 0.01;
+    } else if (currentUser.level === user.level -8) {
+      percentage = 0.01;
+    } else{
+      percentage = 0;
     }
 
     const distributedAmount = remainingAmount * percentage;
