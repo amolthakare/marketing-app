@@ -1,4 +1,5 @@
-https://marketing-app-nvpy.onrender.com
+deployment Link : https://multi-level-marketing.onrender.com
+
 # Multi-Level Marketing API
 
 This is a Multi-Level Marketing (MLM) API developed using Node.js and MongoDB. It allows users to create a multi-level network and distribute earnings among different levels of users based on specified rules.
@@ -41,7 +42,7 @@ node index.js
 
 
 ### Create a new user
-- URL: https://marketing-app-nvpy.onrender.com/users
+- URL: https://multi-level-marketing.onrender.com/users
 - Method: POST
 - Request Body:
 ```bash
@@ -56,7 +57,7 @@ node index.js
 
 
 ### Distribute earnings
-- URL: https://marketing-app-nvpy.onrender.com/distribute
+- URL: https://multi-level-marketing.onrender.com/distribute
 - Method: POST
 - Request Body:
 ```bash
@@ -69,7 +70,7 @@ node index.js
 - amount (required): Amount to be distributed.
 
 ### Get all users
-- URL: https://marketing-app-nvpy.onrender.com/users
+- URL: https://multi-level-marketing.onrender.com/users
 - Method: GET
 
 ### Testing
